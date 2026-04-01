@@ -335,6 +335,32 @@ nav a:hover {
 }
 
 /* Projects Section */
+
+.section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 40px;
+}
+
+.section-badge {
+    display: inline-block;
+    background: rgba(107, 127, 215, 0.12);
+    color: var(--primary-dark);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.section-subtitle {
+    font-size: 1.06rem;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -344,22 +370,14 @@ nav a:hover {
 
 #projects {
     padding: 80px 0;
-    background-color: white;
+    background: #f3f5fa;
 }
 
 #projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    text-align: center;
-    color: #333;
-}
-
-#projects .container {
-    margin-bottom: 30px;
-}
-
-#projects .container:last-child {
-    margin-bottom: 0;
+    font-size: 2.4rem;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.15;
 }
 
 .project-card {
