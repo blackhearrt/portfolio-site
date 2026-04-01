@@ -313,6 +313,27 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.skill-group-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+}
+
+.skill-group-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+    color: var(--primary-dark);
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -402,7 +423,7 @@ nav a:hover {
 /* Goal & Focus Section */
 
 #focus {
-    padding: 32px 0 72px;
+    padding: 36px 0 72px;
     background: var(--bg);
 }
 
@@ -410,19 +431,48 @@ nav a:hover {
     background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
     border: 1px solid var(--border);
     border-radius: 22px;
-    padding: 32px;
+    padding: 34px;
     box-shadow: var(--shadow-soft);
     max-width: 920px;
     margin: 0 auto;
     text-align: center;
 }
 
+.focus-badge {
+    display: inline-block;
+    background: rgba(107, 127, 215, 0.12);
+    color: var(--primary-dark);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
 .focus-text {
     font-size: 1.06rem;
     line-height: 1.8;
     color: var(--muted);
-    max-width: 760px;
-    margin: 0 auto;
+    max-width: 720px;
+    margin: 0 auto 20px;
+}
+
+.focus-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.focus-points span {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.04);
 }
 
 #goal {
@@ -447,34 +497,68 @@ nav a:hover {
 }
 
 /* Contact Section */
+
 #contact {
-    padding: 80px 0;
-    background-color: white;
+    padding: 72px 0;
+    background: var(--bg);
 }
 
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.contact-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 36px;
+    box-shadow: var(--shadow-soft);
+    max-width: 920px;
+    margin: 0 auto;
     text-align: center;
-    color: #333;
 }
 
-#contact p {
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 15px;
+.contact-badge {
+    display: inline-block;
+    background: rgba(107, 127, 215, 0.12);
+    color: var(--primary-dark);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
-#contact a {
-    color: #667eea;
+.contact-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 24px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+.contact-list a {
+    display: inline-block;
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--primary-dark);
+    font-weight: 500;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 12px 18px;
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#contact a:hover {
-    color: #764ba2;
-    text-decoration: underline;
+.contact-list a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(31, 41, 55, 0.08);
 }
+
+
 
 /* Footer */
 footer {
@@ -529,6 +613,7 @@ footer p {
     .hero-layout {
         flex-direction: column;
         text-align: center;
+        gap: 22px;
     }
 
     .hero-content {
@@ -536,19 +621,44 @@ footer p {
     }
 
     .hero-photo {
-        width: 180px;
-        height: 180px;
+        width: 170px;
+        height: 170px;
+    }
+
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .hero-stack {
+        font-size: 0.98rem;
     }
 
     .hero-buttons {
-        justify-content: center;
+        width: 100%;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: 12px;
     }
 
-    .btn {
+    .hero-buttons .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .focus-card,
+    .contact-card,
+    .about-card,
+    .skill-group-card {
+        padding: 24px 20px;
+        border-radius: 18px;
     }
 
     #skills h2,
@@ -569,7 +679,7 @@ footer p {
 
 
     #hero {
-        padding: 60px 0;
+        padding: 64px 0 54px;
     }
 
     #about,
@@ -660,5 +770,37 @@ footer p {
 
     nav ul.active {
         display: flex;
+    }
+}
+
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hero-photo-wrap {
+        order: -1;
+    }
+
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-photo {
+        width: 210px;
+        height: 210px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
     }
 }
