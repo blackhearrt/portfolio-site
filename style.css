@@ -500,7 +500,7 @@ nav a:hover {
 
 #contact {
     padding: 72px 0;
-    background: var(--bg);
+    background: white;
 }
 
 .contact-card {
