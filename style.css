@@ -514,6 +514,109 @@ nav a:hover {
     text-align: center;
 }
 
+/* Opportunity Form */
+#opportunity-form {
+    padding: 72px 0;
+    background: #f7f8fc;
+    border-top: 1px solid var(--border);
+}
+
+.form-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 36px;
+    box-shadow: var(--shadow-soft);
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.form-badge {
+    display: inline-block;
+    background: rgba(107, 127, 215, 0.12);
+    color: var(--primary-dark);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.form-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 720px;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.03);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8b95a5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(107, 127, 215, 0.12);
+}
+
+.form-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-actions .btn {
+    min-width: 170px;
+}
+
+#opportunity-form .section-title {
+    margin-bottom: 16px;
+}
+
 /* Contact Section */
 
 #contact {
@@ -740,6 +843,36 @@ footer p {
     .focus-text {
         font-size: 1rem;
         line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+        #opportunity-form {
+            padding: 56px 0;
+        }
+
+        .form-card {
+            padding: 24px 20px;
+            border-radius: 18px;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .form-intro {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .form-actions {
+            justify-content: stretch;
+        }
+
+        .form-actions .btn {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
 }

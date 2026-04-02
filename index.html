@@ -247,6 +247,131 @@
         </div>
       </section>
 
+      <section id="opportunity-form">
+        <div class="container">
+          <div class="form-card">
+            <div class="form-badge">Recruiter form</div>
+            <h2 class="section-title">Opportunity Form</h2>
+            <p class="form-intro">
+              If you’d like to discuss a role, project, or collaboration, you
+              can leave the details below. This form is intended for recruiters
+              and hiring managers.
+            </p>
+
+            <form id="recruiter-form" action="#" method="POST">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="company">Company name *</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Example: SoftServe"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="position">Proposed position *</label>
+                  <input
+                    type="text"
+                    id="position"
+                    name="position"
+                    placeholder="Example: Junior Front-end Developer"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="recruiter-name">Recruiter name *</label>
+                  <input
+                    type="text"
+                    id="recruiter-name"
+                    name="recruiter_name"
+                    placeholder="Example: Olena Hordienko"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="recruiter-email">Recruiter email *</label>
+                  <input
+                    type="email"
+                    id="recruiter-email"
+                    name="recruiter_email"
+                    placeholder="example@company.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="recruiter-contact"
+                    >Recruiter phone / Telegram</label
+                  >
+                  <input
+                    type="text"
+                    id="recruiter-contact"
+                    name="recruiter_contact"
+                    placeholder="+380... or @username"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="work-format">Work format *</label>
+                  <select id="work-format" name="work_format" required>
+                    <option value="" disabled selected>Select format</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="office">Office</option>
+                    <option value="project-based">Project-based</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="full-time">Full-time</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="responsibilities">Responsibilities *</label>
+                <textarea
+                  id="responsibilities"
+                  name="responsibilities"
+                  rows="5"
+                  placeholder="Describe the main responsibilities of the role"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="conditions">Conditions / offer details *</label>
+                <textarea
+                  id="conditions"
+                  name="conditions"
+                  rows="5"
+                  placeholder="Describe salary range, schedule, cooperation format, expectations, etc."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="comment">Additional comment</label>
+                <textarea
+                  id="comment"
+                  name="comment"
+                  rows="4"
+                  placeholder="Any extra details you’d like to share"
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  Send offer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <div class="container">
           <div class="contact-card">
